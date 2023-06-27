@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de temperatura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Conversão de temperaturas</h1>
+        <form action="#" id="form-selected">
+            <fieldset>
+                
+                <legend>Escoha a opção desejada</legend>
+                
+                <input type="radio" name="conversao" id="c-f" class="radio" value="c-f">
+                    <label for="c-f"> Cº > °F</label><br>
+                <input type="radio" name="conversao" id="f-c" class="radio" value="f-c">
+                    <label for="f-c"> °F > C°</label><br>
+                <input type="radio" name="conversao" id="c-k" class="radio" value="c-k">
+                    <label for="c-k"> C° > K</label> <br>
+                <input type="radio" name="conversao" id="k-c" class="radio" value="k-c">
+                    <label for="k-c"> K > C° </label><br>
+                <input type="radio" name="conversao" id="f-k" class="radio" value="f-k">
+                    <label for="f-k"> °F > K </label><br>
+                <input type="radio" name="conversao" id="k-f" class="radio" value="k-f">
+                    <label for="k-f"> K > °F </label><br>
+            </fieldset>
+        </form>
+        <form action="#" id="input-value">
+            <fieldset>
+                <legend>Coloque a temperatura desejada</legend>
+                <input type="number" name="temp" id="temp">
+                <input type="button" class="btn" onclick="converter()" value="converter">
+            </fieldset>
+        </form>
+        <div id="response">
+
+        </div>
+    </main>
+    <script src="./functions.js"></script>
+</body>
+</html>
