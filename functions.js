@@ -25,43 +25,64 @@ function converter() {
     }
 
 function celsiusForFahrenheit(inputResult) {
-    const respost = document.getElementById('response');
-    respost.classList.add('active');
+    const response = document.getElementById('response');
+    showResult();
     const conversao = Math.round((inputResult * 9/5) + 32);
-    respost.innerHTML = `<p>A temperatura ${inputResult}C° informada é igual a ${conversao}°F</p>`
+    setTimeout(() => {
+        response.innerHTML = `<p>A temperatura ${inputResult}C° informada é igual a ${conversao}°F</p>`;
+    }, 100);
 }
 
 function fahrenheitForCelsius(inputResult) {
-    const respost = document.getElementById('response');
-    respost.classList.add('active');
+    const response = document.getElementById('response');
+    showResult();
     const conversao =  Math.round((inputResult - 32) * 5/9);
-    respost.innerHTML = `<p>A temperatura ${inputResult}°F informada é igual a ${conversao}C°</p>`
+    setTimeout(() => {
+        response.innerHTML = `<p>A temperatura ${inputResult}°F informada é igual a ${conversao}C°</p>`;
+    }, 60);
 }
 
 function celsiusForKelvin(inputResult) {
-    const respost = document.getElementById('response');
-    respost.classList.add('active');
+    const response = document.getElementById('response');
+    showResult();
     const conversao =  Math.round(inputResult + 273.15);
-    respost.innerHTML = `<p>A temperatura ${inputResult}C° informada é igual a ${conversao} K</p>`
+    setTimeout(() => {
+        response.innerHTML = `<p>A temperatura ${inputResult}C° informada é igual a ${conversao} K</p>`;
+    }, 60);
 }
 
 function kelvinForCelsius(inputResult) {
-    const respost = document.getElementById('response');
-    respost.classList.add('active');
+    const response = document.getElementById('response');
+    showResult();
     const conversao =  Math.round(inputResult - 273.15);
-    respost.innerHTML = `<p>A temperatura ${inputResult} K informada é igual a ${conversao}C°</p>`
+    setTimeout(() => {
+        response.innerHTML = `<p>A temperatura ${inputResult} K informada é igual a ${conversao}C°</p>`;
+    },60);
 }
 
 function fahrenheitForKelvin(inputResult) {
-    const respost = document.getElementById('response');
-    respost.classList.add('active');
+    const response = document.getElementById('response');
+    showResult();
     const conversao =  Math.round((inputResult - 32) * 5/9 + 273.15);
-    respost.innerHTML  = `<p>A temperatura ${inputResult}°F informada é igual a ${conversao} K</p>`
+    setTimeout(() => {
+        response.innerHTML  = `<p>A temperatura ${inputResult}°F informada é igual a ${conversao} K</p>`;
+    }, 60);
 }
 
 function kelvinForFahrenheit(inputResult) {
-    const respost = document.getElementById('response');
-    respost.classList.add('active');
+    const response = document.getElementById('response');
+    showResult();
     const conversao =  Math.round((inputResult - 273.15) * 9/5 + 32);
-    respost.innerHTML = `<p>A temperatura ${inputResult} K informada é igual a ${conversao}°F</p>`
+    setTimeout(() => {
+        response.innerHTML = `<p>A temperatura ${inputResult} K informada é igual a ${conversao}°F</p>`;
+    }, 60);
 }}
+
+function showResult() {
+    const response = document.getElementById('response');
+    response.classList.remove('active');
+
+    setTimeout(() => {
+        response.classList.add('active');
+    }, 50);
+}
